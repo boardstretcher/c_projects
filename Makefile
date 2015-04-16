@@ -12,4 +12,4 @@ clean:
 commit:
 	    git add -A .
 	    git commit -m 'automatic commit of successful build $(BUILDID)'
-
+		git push
