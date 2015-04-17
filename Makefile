@@ -1,14 +1,18 @@
 TODAY=$(shell date +%Y%m%d-%H%M%S)
 BUILDID=$(shell date +%Y%m%d-%H:%M:%S)
 #CFLAGS=-Werror -Wall -lncurses
-#DEPS=ncurses.h
-OUTPUT=main
+DEPS=ncurses.h
+
+INPUT=upc.c
+OUTPUT=upc
+
+
 
 all:
-	$(CC) $(CFLAGS) main.c -o $(OUTPUT)
+	$(CC) $(CFLAGS) $(INPUT) -o $(OUTPUT)
 
 clean:
-	rm -rf main
+	rm -rf $(OUTPUT)
 
 commit:
 	git add -A .
