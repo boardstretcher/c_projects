@@ -1,12 +1,11 @@
 TODAY=$(shell date +%Y%m%d-%H%M%S)
 BUILDID=$(shell date +%Y%m%d-%H:%M:%S)
 #CFLAGS=-Werror -Wall -lncurses
-DEPS=ncurses.h
+CFLAGS=-Werror -Wall
+#DEPS=ncurses.h
 
-INPUT=upc.c
-OUTPUT=upc
-
-
+INPUT=invest.c
+OUTPUT=invest
 
 all:
 	$(CC) $(CFLAGS) $(INPUT) -o $(OUTPUT)

@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main(void){
+	
+	int i = 0;
+	int fee = 0;
+	float rate = 0.0;
+
+	printf("Enter the total investment: ");
+	scanf("%d", &i);
+
+	if (i < 2500) {
+		fee = 30;
+		rate = 1.7;
+	}
+	if (i >= 2500 && i < 6250) {
+		fee = 56;
+		rate = 0.66;
+	}
+	if (i >= 6250 && i < 20000) {
+		fee = 76;
+		rate = 0.34;
+	}
+
+	printf("Fee : %d \n", fee);
+	printf("Rate: %.2f \n", rate);
+	printf("After: %.2f \n", (i - (i * (rate * 100))));
+
+	return 0;
+}
