@@ -4,8 +4,8 @@ BUILDID=$(shell date +%Y%m%d-%H:%M:%S)
 CFLAGS=-Werror -Wall
 #DEPS=ncurses.h
 
-INPUT=invest.c
-OUTPUT=invest
+INPUT=legal.c
+OUTPUT=legal
 
 all:
 	$(CC) $(CFLAGS) $(INPUT) -o $(OUTPUT)

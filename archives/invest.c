@@ -13,18 +13,26 @@ int main(void){
 		fee = 30;
 		rate = 1.7;
 	}
-	if (i >= 2500 && i < 6250) {
+	else if (i >= 2500 && i < 6250) {
 		fee = 56;
 		rate = 0.66;
 	}
-	if (i >= 6250 && i < 20000) {
+	else if (i >= 6250 && i < 20000) {
 		fee = 76;
 		rate = 0.34;
+	}
+	else if (i >= 20000 && i < 50000){
+		fee = 100;
+		rate = 0.22;
+	}
+	else {
+		fee = 155;
+		rate = 0.18;
 	}
 
 	printf("Fee : %d \n", fee);
 	printf("Rate: %.2f \n", rate);
-	printf("After: %.2f \n", (i - (i * (rate * 100))));
+	printf("After: %.2f \n", (i * (1 - rate / 100)) - fee);
 
 	return 0;
 }
