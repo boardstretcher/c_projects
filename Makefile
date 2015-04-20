@@ -23,6 +23,7 @@ archive:
 clean:
 	rm -rf $(OUTPUT)
 	rm -rf $(OBJECT)
+	rm -rf include/*.o
 
 commit:
 	git add -A .
