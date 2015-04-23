@@ -7,14 +7,14 @@ BUILDID=$(shell date +%Y%m%d-%H:%M:%S)
 CREV=c11
 CFLAGS=-Werror -Wall -std=$(CREV)
 
-NAME=gcd
+NAME=calendar
 INPUT=$(NAME).c
 OBJECT=$(NAME).o
 OUTPUT=$(NAME)
 
 all:
-	$(CC) -c include/steves_functions.c -o include/steves_functions.o
-	$(CC) -c $(INPUT) -o $(OBJECT)
+	$(CC) $(CFLAGS) -c include/steves_functions.c -o include/steves_functions.o
+	$(CC) $(CFLAGS) -c $(INPUT) -o $(OBJECT)
 	$(CC) $(CFLAGS) $(OBJECT) include/steves_functions.o -o $(OUTPUT)
 
 archive:
