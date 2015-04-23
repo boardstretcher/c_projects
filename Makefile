@@ -7,7 +7,7 @@ BUILDID=$(shell date +%Y%m%d-%H:%M:%S)
 CREV=c11
 CFLAGS=-Werror -Wall -std=$(CREV)
 
-NAME=funcs
+NAME=gcd
 INPUT=$(NAME).c
 OBJECT=$(NAME).o
 OUTPUT=$(NAME)
