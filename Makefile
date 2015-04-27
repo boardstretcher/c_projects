@@ -7,7 +7,7 @@ BUILDID=$(shell date +%Y%m%d-%H:%M:%S)
 CREV=c11
 CFLAGS=-Werror -Wall -std=$(CREV) -ggdb -g3
 
-NAME=bin_search
+NAME=bub_sort
 INPUT=$(NAME).c
 OBJECT=$(NAME).o
 OUTPUT=$(NAME)
@@ -36,6 +36,9 @@ gdb:
 new:
 	cp skel/main.c .
 	mv main.c $(INPUT)
+	
+run:
+	./$(NAME)
 
 test:
 	valgrind ./$(OUTPUT)
