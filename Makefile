@@ -5,9 +5,9 @@ BUILDID=$(shell date +%Y%m%d-%H:%M:%S)
 #CFLAGS=-Werror -Wall -lncurses
 
 CREV=c11
-CFLAGS=-Werror -Wall -std=$(CREV)
+CFLAGS=-Werror -Wall -std=$(CREV) -ggdb -g3
 
-NAME=calendar
+NAME=bin_search
 INPUT=$(NAME).c
 OBJECT=$(NAME).o
 OUTPUT=$(NAME)
@@ -29,6 +29,9 @@ commit:
 	git add -A .
 	git commit -m 'automatic commit of successful build $(BUILDID)'
 	git push
+
+gdb:
+	gdb ./$(NAME)
 
 new:
 	cp skel/main.c .
