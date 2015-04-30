@@ -4,9 +4,9 @@ BUILDID=$(shell date +%Y%m%d-%H:%M:%S)
 #DEPS=ncurses.h
 #CFLAGS=-Werror -Wall -lncurses
 
-CREV=c11
+CREV=c99
 #CFLAGS=-Werror -Wall -std=$(CREV) -ggdb -g3
-CFLAGS=-Werror -Wall -ggdb -g3
+CFLAGS=-Werror -Wall -ggdb -g3 -std=$(CREV)
 
 NAME=bub_sort
 INPUT=$(NAME).c
