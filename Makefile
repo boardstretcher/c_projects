@@ -5,7 +5,8 @@ BUILDID=$(shell date +%Y%m%d-%H:%M:%S)
 #CFLAGS=-Werror -Wall -lncurses
 
 CREV=c11
-CFLAGS=-Werror -Wall -std=$(CREV) -ggdb -g3
+#CFLAGS=-Werror -Wall -std=$(CREV) -ggdb -g3
+CFLAGS=-Werror -Wall -ggdb -g3
 
 NAME=bub_sort
 INPUT=$(NAME).c
